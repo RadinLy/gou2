@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sa_theme_color">#393939</color>
+    <color name="sa_theme_color_deep">#000000</color>
+    <color name="sa_activity_bg">#f0f0f0</color>
+
+</resources>

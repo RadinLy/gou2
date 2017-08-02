@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/v_space"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@color/theme_color"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_base_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_bar"
+            android:background="@color/theme_color"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_base_city"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/icon_adr"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:maxWidth="90dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="城市"
+                android:textColor="@color/text_color_deep"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/tv_base_search"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:background="@drawable/bg_gray_radius5"
+                android:drawableLeft="@mipmap/icon_search"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:maxWidth="250dp"
+                android:paddingLeft="10dp"
+                android:text="请输入要搜索的商品"
+                android:textColor="@color/text_color_light"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_base_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="消息"
+                android:textColor="@color/text_color_deep" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_base_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_color_light" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tl_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:tabIndicatorColor="@color/red"
+            app:tabSelectedTextColor="@color/red"
+            app:tabTextColor="@color/text_color_deep" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_color_light" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        </android.support.v4.view.ViewPager>
+
+
+    </LinearLayout>
+
+</LinearLayout>

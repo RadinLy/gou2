@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header_bar" />
+
+    <com.dev.superframe.view.ptr.PtrClassicFrameLayout
+        android:id="@+id/pfl_display"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/white"
+                    app:indicator_drawable_selected="@drawable/indicator_yes"
+                    app:indicator_drawable_unselected="@drawable/indicator_no"
+                    app:indicator_height="7dp"
+                    app:indicator_margin="3dp"
+                    app:indicator_width="7dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_more_new"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="3dp"
+                            android:layout_height="15dp"
+                            android:background="@color/red" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dip"
+                            android:text="最新书籍"
+                            android:textColor="@color/text_color_deep"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dip"
+                            android:text="全部"
+                            android:textColor="@color/red"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@mipmap/icon_arrow_right_red" />
+                    </LinearLayout>
+
+                    <com.dev.superframe.view.NonScrollGridView
+                        android:id="@+id/gv_display_new"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:horizontalSpacing="8dp"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="3"
+                        android:padding="8dp"
+                        android:scrollbars="none"
+                        android:verticalSpacing="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_more_hot"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="3dp"
+                            android:layout_height="15dp"
+                            android:background="@color/red" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dip"
+                            android:text="最热书籍"
+                            android:textColor="@color/text_color_deep"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dip"
+                            android:text="全部"
+                            android:textColor="@color/red"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@mipmap/icon_arrow_right_red" />
+                    </LinearLayout>
+
+                    <com.dev.superframe.view.NonScrollGridView
+                        android:id="@+id/gv_display_hot"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:horizontalSpacing="8dp"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="3"
+                        android:padding="8dp"
+                        android:scrollbars="none"
+                        android:verticalSpacing="8dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </com.dev.superframe.view.ptr.PtrClassicFrameLayout>
+
+</LinearLayout>
